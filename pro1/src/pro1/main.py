@@ -35,8 +35,7 @@ class PoemFlow(Flow[PoemState]):
     @listen(generate_poem)
     def save_poem(self):
         
-        return{self.state.poem: self.state.poem,self.state.sentence_count: self.state.sentence,"author":"Minahil Nawaz"}
-
+        return{"poem":self.state.poem, "sentence_count":self.state.sentence_count,"author":"Minahil Nawaz"}
 def kickoff():
     poem_flow = PoemFlow()
     poem_flow.kickoff()
